@@ -24,7 +24,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class FileUploadController {
 
-	public static String ROOT = "upload-dir";
+	public static final String ROOT = "upload-dir";
 
 	private final ResourceLoader resourceLoader;
 
