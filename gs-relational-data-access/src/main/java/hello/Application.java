@@ -26,7 +26,6 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-
 		log.info("Creating tables");
 
 		jdbcTemplate.execute("DROP TABLE customers IF EXISTS");
@@ -49,4 +48,5 @@ public class Application implements CommandLineRunner {
 								rs.getString("first_name"), rs.getString("last_name")))
 				.forEach(customer -> log.info(customer.toString()));
 	}
+
 }

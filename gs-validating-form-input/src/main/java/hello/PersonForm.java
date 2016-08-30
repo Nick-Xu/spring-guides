@@ -6,6 +6,7 @@ import javax.validation.constraints.Size;
 
 public class PersonForm {
 
+	@NotNull
 	@Size(min = 2, max = 30)
 	private String name;
 
@@ -29,9 +30,8 @@ public class PersonForm {
 		this.age = age;
 	}
 
-	@Override
 	public String toString() {
-		return String.format("PersonForm [name=%s, age=%s]", name, age);
+		return "Person(Name: " + this.name + ", Age: " + this.age + ")";
 	}
 
 }

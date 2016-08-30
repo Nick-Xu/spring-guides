@@ -65,7 +65,6 @@ public class Application {
 		log.info(
 				"You shouldn't see Buddy or null. null violated DB constraints, and Buddy was rolled back in the same TX");
 		Assert.assertEquals("'null' should have triggered a rollback", 3, bookingService.findAllBookings().size());
-
 	}
 
 }

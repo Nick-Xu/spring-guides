@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class GitHubLookupService {
 
-	RestTemplate restTemplate = new RestTemplate();
+	private RestTemplate restTemplate = new RestTemplate();
 
 	@Async
 	public Future<User> findUser(String user) throws InterruptedException {
