@@ -28,7 +28,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return String.format("Book [isbn=%s, title=%s]", isbn, title);
+		return "Book{" + "isbn='" + isbn + '\'' + ", title='" + title + '\'' + '}';
 	}
 
 }

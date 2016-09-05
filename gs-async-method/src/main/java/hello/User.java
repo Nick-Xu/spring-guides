@@ -26,7 +26,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return String.format("User [name=%s, blog=%s]", name, blog);
+		return "User [name=" + name + ", blog=" + blog + "]";
 	}
 
 }
