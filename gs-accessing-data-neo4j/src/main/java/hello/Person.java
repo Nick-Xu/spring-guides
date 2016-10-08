@@ -18,12 +18,8 @@ public class Person {
 
 	private String name;
 
-	/**
-	 * Neo4j requires a no-arg constructor much like JPA
-	 */
-	@SuppressWarnings("unused")
 	private Person() {
-
+		// Empty constructor required as of Neo4j API 2.0.5
 	}
 
 	public Person(String name) {
@@ -46,6 +42,7 @@ public class Person {
 	}
 
 	public String toString() {
+
 		return this.name + "'s teammates => " + Optional.ofNullable(this.teammates).orElse(Collections.emptySet())
 				.stream().map(person -> person.getName()).collect(Collectors.toList());
 	}
@@ -57,5 +54,4 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 }
